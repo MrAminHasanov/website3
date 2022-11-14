@@ -117,13 +117,14 @@
 /* #region bar3 */
 .bar3{
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
     padding: 20px 0px 110px;
 }
-main>h1,main>h3{
+.bar3>h1,.bar3>h3{
     text-align: center;
 }
-main>h3{
+.bar3>h3{
     margin-top: 70px;
     color: #E45F4E;
     padding: 20px;
@@ -481,8 +482,83 @@ button:hover{
 }
 /* #endregion */
 /* #endregion */
+/* #region foot */
+footer{
+    background-color: rgb(41, 41, 41);
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.foot_box1{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.foot_unbox1{
+    width: 20%;
+}
+.foot_unbox1:first-child{
+    padding-top:10px;
+    width: 32%;
+    line-height: 20px;
+    color: white;   
+}
+.foot_unbox1 > em{
+    display: inline-block;
+    padding-bottom: 30px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.foot_unbox1 > em > span{
+    color: #E45F4E;
+}
+.foot_unbox1 h2{
+    color: #E45F4E;
+    padding-bottom: 20px;
+}
+.foot_unbox1 li{
+    padding-bottom: 15px;
+}
+.foot_unbox1 a{
+    color: white;
+    text-decoration: none;
+}
+.foot_unbox1 a:hover{
+    text-decoration: underline;
+}
+.foot_unbox1 li::before{
+    content: ">";
+    color: white;
+    padding-right: 9px;
+    font-weight: 900;
+}
+.foot_unbox1 p{
+    color: white;
+    font-size: 15px;
+    padding-bottom: 25px;
+}
+.foot_unbox1 i{
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 3px;
+    transition: .2s ease  all;
+}
+.foot_unbox1 i:hover{
+    color: rgb(41, 41, 41);
+    background-color: white;
+}
+/* #endregion */
 /* #region global */
 .container{
     width: 1140px;
+}
+/* #endregion */
+/* #region responsive */
+@media only screen and (max-width:1200px){
+    .container{
+        width: auto;
+    }
 }
 /* #endregion */
