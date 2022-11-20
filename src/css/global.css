@@ -51,6 +51,14 @@ header i{
     font-size: 18px;
     color: #848484;
 }
+.header3 em{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 45px;
+}
+.header3 em span{
+    color: #E45F4E;
+}
 .header3_box1{  
     display: flex;
     justify-content: space-evenly;

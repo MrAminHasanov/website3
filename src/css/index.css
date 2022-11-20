@@ -1,4 +1,4 @@
-/* #region head */
+/* #region head */  
 .header3{
     position: relative;
 }
@@ -12,18 +12,21 @@
     background-color: transparent;
 }
 .header3_textbox{
+    top: 38%;
     width: 100%;
     position: absolute;
-    top: 38%;
     line-height: 65px;
     text-align: center;
 }
+.header3_box1 em{
+    display: none;
+}
 .header3_textbox h3{
     color: #E45F4E;
-    font-size: 22px;
+    font-size: 1.7em;
 }
 .header3_textbox h1{
-    font-size: 55px;
+    font-size: 4.5em;
     color: white;
 }
 .header3_textbox a{
@@ -38,7 +41,7 @@
     background-color: #bb4738;
 }
 /* #endregion */
-/* #region main */
+/* #region main */  
 /* #region bar1 */
 .bar1{
     width: 100%;
@@ -121,16 +124,15 @@
     flex-direction: column;
     padding: 20px 0px 110px;
 }
-.bar3>h1,.bar3>h3{
+.bar3>.container>h1,.bar3>.container>h3{
     text-align: center;
 }
-.bar3>h3{
+.bar3>.container>h3{
     margin-top: 70px;
     color: #E45F4E;
     padding: 20px;
 }
 .bar3_box{
-    width: 1140px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -198,7 +200,6 @@
     padding: 100px 0px;
 }
 .bar5>div{
-    width: 1140px;
     display: flex;
 }
 /* #region box1 */
@@ -215,7 +216,7 @@
 }
 .bar5_box1 h1{
     font-size: 40px;
-    line-height: 80px;
+    padding: 20px 0px;
 }
 .bar5_box1 p{
     color: rgb(187, 187, 187);
@@ -558,7 +559,63 @@ footer{
 /* #region responsive */
 @media only screen and (max-width:1200px){
     .container{
-        width: auto;
+        width: 960px;
     }
 }
-/* #endregion */
+@media only screen and (max-width:990px){
+    /* #region header1 */
+    .header1{
+        flex-direction: column;
+    }
+    .header1 :first-child{
+        padding-bottom:10px;
+    }
+    .header1 span{
+        text-align: center;
+        display:block;
+    }
+    /* #endregion */
+    /* #region header2 */
+    .header2{
+        justify-content: space-evenly;
+    }
+    .header2_box1{
+        display: none;
+    }
+    .header3 ul{
+        display: none;
+        margin-top: 13px;
+    }
+    .header3 li{
+        padding: 12px 0px;
+        display: block;
+    }
+    .header3 em{    
+        font-size: 35px;
+        display: inline-block;
+        color: white;
+    }
+    .header3_box1{
+        justify-content:flex-start;
+        position: relative;
+        padding: 10px;
+        background-color: rgb(41, 41, 41);
+    }
+    .header3_textbox{
+        top: 55%;
+        font-size: 10px;
+    }
+    .burger {
+        padding: 10px;
+    }
+    .burger>div{
+        margin-top: 7px;
+        width: 30px;
+        height: 2px;
+        background-color: rgb(187, 187, 187);
+    }
+    .burger:hover ul{
+        display: block;
+    }
+    /* #endregion */
+}    /* #endregion */
