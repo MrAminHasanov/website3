@@ -6,13 +6,13 @@
     width: 100%;
 }
 .header3_box1{
+    z-index: 1;
     width: 100%;
-    top: 0;
     position: absolute;
     background-color: transparent;
 }
 .header3_textbox{
-    top: 38%;
+    top: 34%;
     width: 100%;
     position: absolute;
     line-height: 65px;
@@ -39,6 +39,9 @@
 }
 .header3_textbox a:hover{
     background-color: #bb4738;
+}
+.heder3_box2{
+    position: relative;
 }
 /* #endregion */
 /* #region main */  
@@ -582,40 +585,190 @@ footer{
     .header2_box1{
         display: none;
     }
+    /* #endregion */
+    /* #region header3 */
     .header3 ul{
         display: none;
+        position: relative;
+        left: -1%;
         margin-top: 13px;
+        transition: ease 1s all;
     }
     .header3 li{
         padding: 12px 0px;
         display: block;
     }
-    .header3 em{    
+    .header3 em{ 
+        left: 10px;
+        position: absolute;   
         font-size: 35px;
-        display: inline-block;
+        display: block;
         color: white;
     }
     .header3_box1{
-        justify-content:flex-start;
         position: relative;
         padding: 10px;
         background-color: rgb(41, 41, 41);
     }
     .header3_textbox{
-        top: 55%;
         font-size: 10px;
     }
     .burger {
+        width: 100%;
+        z-index: 1;
         padding: 10px;
     }
-    .burger>div{
+    .burger >div{
+        position: relative;
+        left: calc(100% - 20px);
+        display: inline-block;
+    }
+    .burger>div>div{
         margin-top: 7px;
         width: 30px;
         height: 2px;
         background-color: rgb(187, 187, 187);
     }
-    .burger:hover ul{
-        display: block;
-    }
     /* #endregion */
-}    /* #endregion */
+} 
+@media only screen and (max-width:960px){
+.container{
+    width: 700px;
+}
+/* #region bar1 */
+.bar1{
+    display: block;
+}
+.bar1_box{
+    border: none;
+    width: 100%;
+    padding: 30px;
+}
+/* #endregion */
+/* #region bar2 */
+.bar2 img{
+    width: 100%;
+}
+.bar2{
+    display: block;
+}
+.bar2_box{
+    padding-top: 30px;
+    line-height: 50px;
+    width: 100%;
+}
+/* #endregion */
+/* #region bar3 */
+.bar3_unbox{
+    width: 48%;
+}
+/* #endregion */
+/* #region bar4 */
+.bar4{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;  
+}
+.bar4_box{
+    padding: 50px 0px;
+    width: 100%;
+}
+/* #endregion */
+/* #region bar5 */
+.bar5 > .container{
+    display: block;
+}
+.bar5_box1{
+    width: 100%;
+}
+.bar5_box1 img{
+    width: 80%;
+}
+.bar5_box2{
+    padding-top: 40px;
+    width: 100%;
+    margin-left: 0px;
+}
+/* #endregion */
+/* #region bar7 */
+.bar7_box{
+    display: block;
+}
+/* #endregion */
+/* #region bar8 */
+.bar8_unbox:first-child,.bar8_unbox:last-child{
+    display: none;
+}
+.bar8_unbox:nth-child(2){
+    width: 100%;
+}
+/* #endregion */
+/* #region bar9 */
+.bar9_box{
+    display: block;
+}
+.bar9_unbox{
+    width: 100%;
+}
+/* #endregion */
+/* #region footer */
+.foot_box1{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.foot_unbox1{
+    width: auto;
+}
+.foot_unbox1:first-child{
+    width: 100%;
+}
+/* #endregion */
+}
+@media only screen and (max-width:800px){
+    .container{
+        width: 500px;
+    }
+/* #region head */
+.header3_textbox{
+    font-size: 8px;
+}
+.header3_textbox h3{
+    height: 40px;
+    font-size: 2.5em;
+}
+/* #endregion */
+/* #region bar3 */
+    .bar3_unbox{
+        width: 100%;
+    }
+/* #endregion */
+/* #region bar5 */
+.bar5_box2{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+/* #endregion */
+/* #region footer */
+    .foot_unbox1{
+        width: 100%;
+    }
+/* #endregion */
+/* #region bar3 */
+/* #endregion */
+}
+@media only screen and (max-width:500px){
+    .container{
+        width: 95%;
+    }
+    .header3_textbox{
+        top: 20%;
+        font-size: 6px;
+    }
+    .bar4{
+        grid-template-columns: 1fr;
+        font-size: 20px;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+/* #endregion */
